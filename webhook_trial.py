@@ -18,9 +18,11 @@ def root():
 def hook_root():
   #if request.headers['Content-Types'] == 'application/json':  # calling json objects
   #print(request.json)
+  try: p.terminate()
+  except: pass
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
   g.pull('https://github.com/ur8moms/first_repo')
-  subprocess.call("first.py")
+  p = subprocess.Popen(['python', 'test.py'])
   return json.dumps(request.json)
 
 if __name__ == '__main__':
