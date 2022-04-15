@@ -2,7 +2,7 @@ import praw
 from flask import Flask
 from flask import request
 from flask import json  #importing json cause that’s what we’re going to be working with
-import git subprocess
+import git,subprocess
 
 #if self.git_is_installed():
 #            g = Git(options['path'])
