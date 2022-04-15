@@ -23,7 +23,7 @@ def hook_root():
   #if request.headers['Content-Types'] == 'application/json':  # calling json objects
   #print(request.json)
   try:
-    g = open('pid.pkl', 'rb')
+    g = open('../pid.pkl', 'rb')
     pid = pickle.load(g)
     g.close()
     os.kill(pid, signal.SIGTERM)
