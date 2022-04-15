@@ -6,6 +6,7 @@ import git,subprocess
 import traceback
 import os
 import signal
+import pickle
 
 #if self.git_is_installed():
 #            g = Git(options['path'])
