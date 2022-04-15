@@ -1,4 +1,7 @@
 #webhook test 7
+import time
 print('trial')
-fp = open('sales.txt', 'x')
-fp.close()
+while(True):
+  print('trial1')
+  time.sleep(5)
+  
