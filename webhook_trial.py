@@ -26,6 +26,7 @@ def hook_root():
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
   g.pull('https://github.com/ur8moms/first_repo')
   p = subprocess.Popen(['python', 'first.py'])
+  p_arr.append(p)
   return json.dumps(request.json)
 
 if __name__ == '__main__':
