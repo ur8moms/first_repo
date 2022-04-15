@@ -17,10 +17,10 @@ def root():
 
 @app. route('/hooktest', methods=['POST'])  # ‘/hooktest’ specifies which link will it work on
 def hook_root():
-  global p
+  global p_arr
   #if request.headers['Content-Types'] == 'application/json':  # calling json objects
   #print(request.json)
-  try: p.kill()
+  try: p_arr[-1].kill()
   except: 
     traceback.print_exc()
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
@@ -30,4 +30,5 @@ def hook_root():
 
 if __name__ == '__main__':
   #hook_root()
+  p_arr=[]
   app.run(debug=True)
