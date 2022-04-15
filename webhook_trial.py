@@ -33,6 +33,7 @@ def hook_root():
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
   g.pull('https://github.com/ur8moms/first_repo')
   p = subprocess.Popen(['python', 'first.py'])
+  print('trial')
   pid=p.pid
   f = open('../pid.pkl', 'wb')
   pickle.dump(pid, f)
@@ -41,5 +42,4 @@ def hook_root():
 
 if __name__ == '__main__':
   #hook_root()
-  p_arr=[]
   app.run(debug=True)
