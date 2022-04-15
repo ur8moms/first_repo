@@ -2,6 +2,6 @@
 import time
 print('triala')
 while(True):
-  print('trial1')
+  print('trial2')
   time.sleep(5)
   
