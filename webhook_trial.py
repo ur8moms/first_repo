@@ -3,6 +3,7 @@ from flask import Flask
 from flask import request
 from flask import json  #importing json cause that’s what we’re going to be working with
 import git,subprocess
+import traceback
 
 #if self.git_is_installed():
 #            g = Git(options['path'])
@@ -19,8 +20,9 @@ def hook_root():
   global p
   #if request.headers['Content-Types'] == 'application/json':  # calling json objects
   #print(request.json)
-  try: p.terminate()
-  except: pass
+  try: p.kill()
+  except: 
+    traceback.print_exc()
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
   g.pull('https://github.com/ur8moms/first_repo')
   p = subprocess.Popen(['python', 'first.py'])
