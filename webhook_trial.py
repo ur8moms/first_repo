@@ -22,7 +22,7 @@ def hook_root():
   except: pass
   g = git.cmd.Git('https://github.com/ur8moms/first_repo')
   g.pull('https://github.com/ur8moms/first_repo')
-  p = subprocess.Popen(['python', 'test.py'])
+  p = subprocess.Popen(['python', 'first.py'])
   return json.dumps(request.json)
 
 if __name__ == '__main__':
