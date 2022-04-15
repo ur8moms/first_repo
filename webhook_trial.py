@@ -16,6 +16,7 @@ def root():
 
 @app. route('/hooktest', methods=['POST'])  # ‘/hooktest’ specifies which link will it work on
 def hook_root():
+  global p
   #if request.headers['Content-Types'] == 'application/json':  # calling json objects
   #print(request.json)
   try: p.terminate()
@@ -26,4 +27,5 @@ def hook_root():
   return json.dumps(request.json)
 
 if __name__ == '__main__':
+  global p
   app.run(debug=True)
